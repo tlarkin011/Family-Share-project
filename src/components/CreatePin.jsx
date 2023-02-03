@@ -40,7 +40,7 @@ const CreatePin = ({ user }) => {
   };
 
   const isFormDataValid = useMemo(() => {
-    return !!(title && about && destination && imageAsset?._id && category);
+    return !!(title && about &&  imageAsset?._id && category);
   }, [about, category, destination, imageAsset?._id, title]);
 
   const createPin = () => {
@@ -148,8 +148,8 @@ const CreatePin = ({ user }) => {
             type="text"
             value={destination}
             onChange={(e) => setDestination(e.target.value)}
-            placeholder='Add a destination link'
-            className='outline-none text-base sm:text-lg font-bold border-b-2 border-gray-200 p-2'
+            placeholder='Add a link if you have one.'
+            className='outline-none text-base sm:text-sm font-bold border-b-2 border-gray-200 p-2'
           />
           <div className='flex flex-col'>
             <div>
